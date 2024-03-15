@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Movie Manage</title>
+		<link rel="stylesheet" href="/assets/css/main.css">
+	</head>
+	<body>
+		<div id="app">
+			<h1 class="anta-regular">Movie Manage APP</h1>
+			<!--left : search field box / results of searching box / movie informations box-->
+			<div class="container flex jcc gap-30">
+				<div class="left relative">
+					<div class="search-box absolute flex aic">
+						<i class="fa-solid fa-magnifying-glass absolute "></i>
+						<input class="flex-1" type="search" placeholder="search by title, year, gender, actor...">
+					</div>
+					<div class="searche-result absolute none">
+						here goes results of seraching
+					</div>
+					<div class="movie-infos">
+						<div class="img-box">
+							<img src="/assets/images/img.jpg" width="400" alt="illustration">
+						</div>
+						<div class="boxInfos">
+							<div class="infos flex flex-column gap-10">
+								<div class="title">
+									<strong>Title :</strong>
+									the title
+								</div>
+								<div class="realisator">
+									<strong>Réalisateur :</strong>
+									le realisateur
+								</div>
+								<div class="gender-and-year">
+									<strong>Genre :</strong>
+									Animation
+									<strong>Annee :</strong>
+									2023
+								</div>
+								<div class="language">
+									<strong>Langue :</strong>
+									français
+								</div>
+								<div class="actors">
+									<strong>Acteurs :</strong>
+									mckwunthy Ari, Kat Tati, Phoeubbe Ko
+								</div>
+							</div>
+							<div class="synospis courgette-regular">
+								<strong>Synopsis :</strong>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, totam autem? Libero ex odit quia maxime iusto id autem perspiciatis a, ipsa itaque qui adipisci cum voluptatibus aspernatur nemo quos!
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--right : add-buttonBox / add-Form new movie form -->
+				<div class="right flex-1 flex flex-column gap-20 relative">
+					<div class="add-movie">
+						<button class="anta-regular">add movie</button>
+					</div>
+					<div class="add-form absolute flex flex-column aic none">
+						<h3 class="anta-regular">Add new movie</h3>
+						<form action="#" name="movieForm">
+							<input type="text" name="title" id="title" placeholder="Title" pattern="[a-zA-Z0-9].{2,}"><br>
+							<input type="text" name="realisateur" id="realisateur" placeholder="Réalisateur" pattern="[a-zA-Z].{2,}"><br>
+							<select name="gender" id="gender">
+								<option value="">choose movie gender</option>
+								<option value="comedie">comedie</option>
+								<option value="drame">drame</option>
+								<option value="thriller">thriller</option>
+								<option value="action">action</option>
+								<option value="aventure">aventure</option>
+								<option value="horreur">horreur</option>
+								<option value="fiction">fiction</option>
+								<option value="fantastique">fantastique</option>
+								<option value="animation">animation</option>
+								<option value="musical">musical</option>
+								<option value="documentaire">documentaire</option>
+								<option value="guerre">guerre</option>
+								<option value="western">western</option>
+								<option value="biopic">biopic</option>
+								<option value="romantique">romantique</option>
+							</select><br>
+							<input type="text" name="year" placeholder="Year" id="year" pattern="^[1-2][0-9]{3}"><br>
+							<input type="text" name="language" id="language" placeholder="Langue" pattern="^[a-zA-Z]{2,15}"><br>
+							<input type="number" name="time" id="time" placeholder="Durée en minutes" min="1" max="9999"><br>
+							<input type="text" name="actors" id="actors" placeholder="Acteurs" pattern="[a-zA-Z].{2,100}"><br>
+							<textarea name="synopsis" id="synopsis" cols="30" rows="5" placeholder="Synopsis (au moins 10 caracteres)" minlength="10" maxlength="600"></textarea><br>
+							<button class="none">enregistrer</button>
+						</form>
+						<div class="cancel absolute flex jcc aic">cancel</div>
+					</div>
+					<div class="movie-box ">
+						<table>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>title</th>
+									<th>realisateur</th>
+									<th>genre</th>
+									<th>annee</th>
+									<th>durée</th>
+									<th>langue</th>
+									<th>acteurs</th>
+									<th>actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>9999</td>
+									<td>bob marley a la recherche de sa fille</td>
+									<td>bob marley, ari mckwunthy</td>
+									<td>music</td>
+									<td>2024</td>
+									<td>02h45</td>
+									<td>anglais</td>
+									<td>rasta marley, haile selacie</td>
+									<td>
+										<button class="view anta-regular">view</button>
+										<button class="update anta-regular">update</button>
+										<button class="save none anta-regular">save</button>
+										<button class="delete anta-regular">delete</button>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>#</th>
+									<th>title</th>
+									<th>realisateur</th>
+									<th>genre</th>
+									<th>annee</th>
+									<th>durée</th>
+									<th>langue</th>
+									<th>acteurs</th>
+									<th>actions</th>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/assets/js/movieData.js"></script>
+		<script type="module" src="/assets/js/app.js"></script>
+	</body>
+</html>

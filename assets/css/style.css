@@ -1,0 +1,376 @@
+/***********BODY*************/
+body {
+    background-image: url(/assets/images/bg-6.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+/***********APP*************/
+#app {
+    /* border: 1px solid red; */
+    width: 98%;
+    margin: 0 auto;
+}
+
+#app h1 {
+    text-align: center;
+    color: var(--main-color-white);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/***********CONTAINER*************/
+/* .container {
+    border: 1px solid #eee;
+} */
+
+/***********left*************/
+.container .left {
+    /* border: 1px solid red; */
+    border-radius: 20px;
+}
+
+.left .search-box {
+    width: 90%;
+    margin: 5px 18px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.left .search-box .fa-solid {
+    color: var(--main-color-gray);
+    font-size: 1.8rem;
+    left: 5px;
+    top: 9px;
+    height: 100%;
+}
+
+.left .search-box input {
+    height: 100%;
+    padding-left: 45px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.left .searche-result {
+    top: 50px;
+    left: 50px;
+    /* border: 5px solid yellow; */
+    max-height: 300px;
+    width: 300px;
+    overflow: auto;
+    background-color: white;
+    z-index: 999999999999;
+    color: var(--main-color-black);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+/*item of search result*/
+.left .searche-result div {
+    margin-left: 5px;
+    text-transform: capitalize;
+}
+
+.left .searche-result div:hover {
+    text-decoration: underline;
+    /* background-color: var(--main-color-gray); */
+    cursor: pointer;
+}
+
+
+
+/***********movie-infos*************/
+.movie-infos {
+    color: var(--main-color-black);
+    width: 405px;
+    height: 700px;
+    /* background-color: var(--main-color-white); */
+    background-color: teal;
+    border-radius: 20px 20px 0 0;
+}
+
+.movie-infos .img-box {
+    width: 405px;
+    height: 350px;
+    /* border: 3px solid teal; */
+    border-radius: 20px;
+}
+
+.movie-infos .img-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+/***********infos*************/
+.movie-infos .infos {
+    margin: 20px 0px;
+    padding-left: 10px;
+}
+
+.movie-infos .synospis {
+    margin: 0 10px;
+    text-align: justify;
+}
+
+/***********RIGHT*************/
+.right .add-movie button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    box-shadow: 2px 3px 2px 2px var(--main-color-black);
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+/***********add-form*************/
+.add-form {
+    z-index: 9;
+    background-color: var(--main-color-white);
+    width: 97%;
+    height: 95%;
+    opacity: 0.95;
+    padding: 20px;
+}
+
+.add-form h3 {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 2.1rem;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+
+.add-form form {
+    /* border: 1px solid red; */
+    width: 600px;
+    background-color: var(--main-color-blacked);
+    text-align: center;
+}
+
+.add-form .cancel {
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 99;
+    color: var(--main-color-black);
+    right: 100px;
+    bottom: 30px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    background-color: var(--main-color-red);
+    box-shadow: 1px 1px 1px 1px var(--main-color-black);
+    cursor: pointer;
+}
+
+.add-form form button,
+.add-form form input,
+.add-form form select,
+.add-form form textarea {
+    margin-bottom: 10px;
+    outline: none;
+    border: 2px ridge var(--main-color-gray);
+    color: var(--main-color-gray);
+    border-radius: 5px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.add-form form input {
+    width: 98.1%;
+    height: 40px;
+}
+
+.add-form form select {
+    width: 100%;
+    height: 40px;
+}
+
+.add-form form textarea {
+    width: 98.1%;
+    height: 100px;
+    resize: none;
+}
+
+.add-form form button {
+    width: 99%;
+    height: 40px;
+    font-weight: bold;
+    color: var(--main-color-white);
+    background-color: var(--main-color);
+    box-shadow: 1px 1px 1px 1px var(--main-color-black);
+}
+
+form input:invalid,
+textarea:invalid {
+    background-color: var(--main-color-red);
+    color: var(--main-color-black);
+}
+
+
+/***********movie-box*************/
+.movie-box {
+    margin-right: 20px;
+    height: 600px;
+    overflow: auto;
+}
+
+.movie-box table {
+    border: 1px solid #eee;
+}
+
+table {
+    border-collapse: collapse;
+    /* width: 100%; */
+    width: 1180px;
+}
+
+table tr:nth-child(2n) {
+    background-color: var(--main-color-blacked);
+}
+
+/* table tr:nth-child(2n+1) {
+    background-color: var(--main-color-blue);
+} */
+
+tr {
+    width: 1180px;
+}
+
+.movie-box table tr th {
+    border: 2px solid var(--main-color-white);
+    background-color: var(--main-color-black);
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 30px;
+    padding: 0;
+    padding-left: 5px;
+}
+
+.movie-box table tr td {
+    border: 2px solid #eee;
+    min-height: 30px;
+    padding: 0;
+    padding-left: 5px;
+    text-transform: capitalize;
+}
+
+.table-body {
+    height: 530px;
+    overflow: auto;
+    /* border: 3px solid teal; */
+}
+
+/*table case dimenssion*/
+table tr>* {
+    height: 40px;
+}
+
+table tr>:nth-child(1) {
+    width: 52px;
+}
+
+table tr>:nth-child(2) {
+    width: 200px;
+}
+
+table tr>:nth-child(3) {
+    width: 170px;
+}
+
+table tr>:nth-child(4) {
+    width: 85px;
+}
+
+table tr>:nth-child(5) {
+    width: 73px;
+}
+
+table tr>:nth-child(6) {
+    width: 83px;
+}
+
+table tr>:nth-child(7) {
+    width: 92px;
+}
+
+table tr>:nth-child(8) {
+    width: 238px;
+}
+
+table tr>:nth-child(9) {
+    width: 181px;
+}
+
+/***********button*************/
+table tbody tr td:nth-child(9) button {
+    height: 27px;
+    border: none;
+    padding: 0;
+    margin: auto 0;
+    width: 30%;
+    cursor: pointer;
+    box-shadow: 1px 2px 2px 2px var(--main-color-black);
+    text-transform: capitalize;
+    /* font-weight: bold; */
+    color: var(--main-color-white);
+}
+
+button.view {
+    background-color: var(--main-color-green);
+}
+
+button.update {
+    background-color: var(--main-color-orangeee);
+}
+
+button.save {
+    background-color: var(--main-color-gold);
+}
+
+button.delete {
+    background-color: var(--main-color-red);
+}
+
+/***********wrong and correct and aucune*************/
+.wrong {
+    border: 1px solid var(--main-color-red);
+}
+
+.correct {
+    border: 1px solid var(--main-color-green);
+}
+
+.aucune {
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    color: var(--main-color-red);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.boxInformations {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+/***********APP*************/
+/***********APP*************/
+/***********APP*************/
