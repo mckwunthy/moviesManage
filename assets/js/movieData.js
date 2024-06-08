@@ -133,7 +133,7 @@ var listenerFunction = {
         var error = false
         if (!content) {
             error = true
-        } else if (!/[1-9]{2,5}/.test(content)) {
+        } else if (!/[1-9][0-9]{0,5}/.test(content)) {
             error = true
         }
 
@@ -235,8 +235,8 @@ var setupListeners = () => {
     window.onkeyup = () => {
         console.log(checkFormValidity());
         // console.log(content);
-        //console.log(check);
-        console.log(movieData);
+        // console.log(check);
+        //console.log(movieData);
 
     }
 }

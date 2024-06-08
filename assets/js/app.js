@@ -35,10 +35,11 @@ window.onload = async () => {
     //enregistrement des donnees
     var submitBt = document.forms[0].elements[8]
     submitBt.onclick = () => {
+
         addMovie(movieData)
-            .then((response) => {
-                // console.log(response);
-            })
+        // .then((response) => {
+        //     // console.log(response);
+        // })
 
         //on vide movieData et check apres les avoir utiliser (inserer)
         movieData = {}
