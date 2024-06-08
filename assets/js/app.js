@@ -95,7 +95,7 @@ window.onload = async () => {
              </table>
              `
 
-            let tableBody
+            let tableBody = ""
             for (let index = 0; index < dataToShow.length; index++) {
                 const element = dataToShow[index];
                 //body de la table
